@@ -13,11 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.vaydox.nolo.core
+package com.vaydox.nolo
 
 import android.app.Application
 import android.content.Context
-import com.vaydox.nolo.BuildConfig
 import com.vaydox.nolo.core.platform.BaseActivity
 import org.junit.Rule
 import org.junit.runner.RunWith

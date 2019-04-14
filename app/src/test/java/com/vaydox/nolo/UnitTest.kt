@@ -13,17 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.vaydox.nolo.core
+package com.vaydox.nolo
 
-import org.junit.rules.TestRule
-import org.mockito.MockitoAnnotations
+import org.junit.Rule
+import org.junit.runner.RunWith
+import org.mockito.junit.MockitoJUnitRunner
 
-class InjectMocksRule {
+/**
+ * Base class for Unit tests. Inherit from it to create test cases which DO NOT contain android
+ * framework dependencies or components.
+ *
+ * @see AndroidTest
+ */
+@RunWith(MockitoJUnitRunner::class)
+abstract class UnitTest {
 
-    companion object {
-        fun create(testClass: Any) = TestRule { statement, _ ->
-            MockitoAnnotations.initMocks(testClass)
-            statement
-        }
-    }
+    @Suppress("LeakingThis")
+    @Rule @JvmField val injectMocks = InjectMocksRule.create(this@UnitTest)
 }

@@ -1,13 +1,10 @@
 package com.vaydox.nolo.feature.loading
 
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
-import com.vaydox.nolo.R
+import com.vaydox.nolo.core.platform.BaseActivity
+import com.vaydox.nolo.core.platform.BaseFragment
 
-class LoadingActivity : AppCompatActivity() {
+class LoadingActivity : BaseActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
+    override fun fragment(): BaseFragment = LoadingFragment()
+
 }

@@ -1,7 +1,7 @@
 package com.vaydox.nolo.core.platform
 
 import android.arch.lifecycle.MutableLiveData
-import com.vaydox.nolo.core.AndroidTest
+import com.vaydox.nolo.AndroidTest
 import com.vaydox.nolo.core.exception.Failure
 import org.amshove.kluent.shouldBeInstanceOf
 import org.junit.Test
